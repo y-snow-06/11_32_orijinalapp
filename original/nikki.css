@@ -1,0 +1,16 @@
+h1{
+    background-color: #009966;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0 -10px 10px -10px;
+}
+form{
+    display: block;
+}
+fieldset{
+    width: 500px;
+    margin:0 auto;
+    background-color: antiquewhite;
+    padding: 0 10px 20px 10px;
+}
