@@ -1,6 +1,10 @@
 <?php
 //var_dump($_POST);
 //exit();
+session_start(); 
+include('functions.php'); 
+check_session_id();
+
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 

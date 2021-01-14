@@ -1,7 +1,8 @@
 <?php
-
+session_start();
 //functionsからデータベース接続をコピー（今までの接続文は削除）
 include('functions.php');
+check_session_id();
 $pdo = connect_to_db();
 
 // 参照はSELECT文!
@@ -43,7 +44,8 @@ if ($status==false) {
     <form action="todo_input.php" method="POST">
         <fieldset>
         <legend>記事一覧</legend>
-            <a href="todo_read.php">過去の記録</a>
+            <a href="todo_input.php">記事投稿画面</a>
+            <a href="todo_logout.php">logout</a>
             <table>
              <thead>
             <tr>

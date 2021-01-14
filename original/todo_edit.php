@@ -2,10 +2,12 @@
 //var_dump($_GET);
 //exit();
 //idをGETで取得する
+session_start();
 $id = $_GET['id'];
 
 //DB連携
 include('functions.php');
+check_session_id();
 $pdo = connect_to_db();
 
 $sql = 'SELECT * FROM diary_table WHERE id=:id';

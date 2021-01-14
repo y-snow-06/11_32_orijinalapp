@@ -2,6 +2,10 @@
 //var_dump($_POST);
 //exit();
 //エラーチェック
+session_start(); 
+include('functions.php'); 
+check_session_id();
+
 ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
@@ -21,7 +25,7 @@ $weather = $_POST['weather'];
 
 //functionsからデータベース接続をコピー（今までの接続文は削除）
 
-include('functions.php');
+//include('functions.php');
 $pdo = connect_to_db();
 
 //SQL作成＆実行

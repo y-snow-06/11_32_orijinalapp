@@ -1,11 +1,12 @@
 <?php
 //var_dump($_GET);
 //exit();
-
+session_start();
 $id = $_GET['id'];
 
 //DB連携
 include('functions.php');
+check_session_id();
 $pdo = connect_to_db();
 
 $sql = 'DELETE FROM diary_table WHERE id=:id';

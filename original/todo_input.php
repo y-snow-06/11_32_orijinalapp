@@ -1,3 +1,9 @@
+<?php
+session_start(); 
+include('functions.php'); 
+check_session_id();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +17,7 @@
         <fieldset>
             <h1>記事投稿</h1>
             <a href="todo_read.php">過去の記録</a>
+            <a href="todo_logout.php">logout</a>
 
             <p>題名</p>
             <p><input type="text" name="title" size="40" value=""></p>
