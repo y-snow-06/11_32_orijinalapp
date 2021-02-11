@@ -33,6 +33,16 @@
   <script>
     $('#search').on('keyup', function () {
       console.log($(this).val());
+      const serchWord = $(this).val();
+      const requestUrl = 'ajax_get.php';
+      axios.get('${requestUrl}?searchword=${serchWord}')
+      .then(function(response){
+        console.log(response);
+      })
+      .catch(function (error){
+        console.log(error);
+      })
+      .finally()
     });
   </script>
 </body>
